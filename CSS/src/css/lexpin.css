@@ -1,6 +1,7 @@
 * {
 margin: 0;
 padding: 0;
+font-family: "Space Grotesk", sans-serif;
 }
 
 /* Barra de navegacion */
@@ -23,7 +24,7 @@ nav {
   padding: 20px;
   /*Radio de los bordes, se lee arriba izquierda, arriba derecha
   abajo izquierda, abajo derecha*/
-  border-radius: 0 0 20px 20px; 
+  /*border-radius: 0 0 20px 20px;*/
 }
 
 /*
@@ -47,7 +48,8 @@ nav div {
 */
 nav div a:visited, nav div a:link {
   color: white;
-  text-decoration:none
+  text-decoration:none;
+  transition: all 1s ease;
 }
 
 .enlace:hover {
@@ -59,3 +61,69 @@ nav div a:visited, nav div a:link {
   color: black;
 }
 */
+
+/*
+nav div a {
+  margin: 0 20px;
+}
+*/
+
+/*MAIN*/
+main {
+  background-color: black;
+  background-image: linear-gradient(to right, #3d3dbd, #2020bd );
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+/*
+  GRID
+  Grid es un tipo de Display que permite manejar
+  un sistema de filas y columnas
+*/
+
+header {
+  height: 80vh;
+  min-height: 80vh;
+  background-color:rgb(60, 120, 211);
+  background-image: url("https://as1.ftcdn.net/v2/jpg/01/61/23/82/1000_F_161238202_GbkRIC1lSjG7lZCLLPfQ7wAaEQyw9UsG.jpg");
+  background-size: cover;
+  /*opacity: 0.2;*/
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  border-radius: 25px;
+  /*grid-template-rows: 200px;*/
+  /*Eje principal*/
+  justify-items: center;
+  /*Eje secundario*/
+  align-content: center;
+  gap: 20px;
+}
+
+header > div{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+
+/*ANIMACION*/
+.gradient-background {
+  background: linear-gradient(300deg,#3d3dbd,#2020bd,#f8f8ff);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
