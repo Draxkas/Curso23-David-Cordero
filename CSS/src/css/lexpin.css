@@ -2,6 +2,7 @@
 margin: 0;
 padding: 0;
 font-family: "Space Grotesk", sans-serif;
+z-index: 10;
 }
 
 /* Barra de navegacion */
@@ -86,8 +87,6 @@ main {
 header {
   height: 80vh;
   min-height: 80vh;
-  background-color:rgb(60, 120, 211);
-  background-image: url("https://as1.ftcdn.net/v2/jpg/01/61/23/82/1000_F_161238202_GbkRIC1lSjG7lZCLLPfQ7wAaEQyw9UsG.jpg");
   background-size: cover;
   /*opacity: 0.2;*/
   display: grid;
@@ -99,6 +98,24 @@ header {
   /*Eje secundario*/
   align-content: center;
   gap: 20px;
+  position: relative;
+}
+
+header::before {
+  background-image: url("https://as1.ftcdn.net/v2/jpg/01/61/23/82/1000_F_161238202_GbkRIC1lSjG7lZCLLPfQ7wAaEQyw9UsG.jpg");
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: absolute;
+  z-index: 5;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  border: 20px solid white;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 1);
 }
 
 header > div{
